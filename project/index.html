@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unwind Restaurant</title>
+    <!-- Bootstrap CSS for styling -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Google Fonts for custom font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS for additional styling -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #ae5050;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #ff6347;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+        }
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .navbar a:hover {
+            background-color: #444;
+        }
+        /* Styling for button */
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        /* Styling for main content area */
+        .container {
+            text-align: center;
+        }
+        img {
+            margin: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>Unwind Restaurant</h1>
+        <img src="restaurant_logo.jpeg" alt="Unwind Restaurant Logo" width="100" height="100">
+    </div>
+
+    <!-- Navigation -->
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="reservations.html">Reservations</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <button onclick="showMessage()">Reserve Now</button>
+    </div>
+
+    <!-- Main content area (container) -->
+    <div class="container mt-5">
+        <h2>Welcome to Unwind Restaurant</h2>
+        <h3>Your Destination for Fine Dining and Unforgettable Experiences</h3>
+        <p>
+            Unwind Restaurant is a premier dining destination, offering an exceptional culinary experience with a focus on quality ingredients, innovative recipes, and impeccable service. Our executive chef, Jane Doe, and her team create delightful dishes that blend tradition with creativity.
+        </p>
+        <p>
+            Whether you're celebrating a special occasion or enjoying a casual dinner with friends, Unwind Restaurant offers a warm and inviting atmosphere for all. Our menu features a variety of dishes, from exquisite appetizers to mouth-watering desserts, catering to different tastes and preferences.
+        </p>
+
+        <!-- Display restaurant images -->
+        <img src="7.jpg" width="350" height="200">
+        <img src="2.jpg" width="350" height="200">
+        <img src="9.jpg" width="350" height="200"><br><br>
+        <img src="4.jpg" width="350" height="200">
+        <img src="5.jpg" width="350" height="200">
+        <img src="6.jpg" width="350" height="200">
+    </div>
+
+    <!-- JavaScript code for button click handler -->
+    <script>
+        function showMessage() {
+            alert("Reserve your table now!");
+            // Navigate to the reservations page
+            window.location.href = "reservations.html";
+        }
+    </script>
+</body>
+
+</html>

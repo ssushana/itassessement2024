@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unwind Restaurant</title>
+    <!-- Bootstrap CSS for styling -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Google Fonts for custom font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS for additional styling -->
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f7fa; /* Change body background color here */
+        }
+        h1, h2, h3 {
+            color: #3c3c3c;
+        }
+
+        /* Header */
+        .header {
+            background-color: #00796b; /* Change header background color here */
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+        }
+        .header img {
+            display: block;
+            margin: 0 auto;
+            margin-top: 10px; /* Adjust margin as needed */
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #004d40; /* Change navbar background color here */
+            padding: 10px 0;
+            text-align: center;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .navbar a:hover {
+            background-color: #00695c;
+        }
+        .menu-button {
+            margin-left: 10px; /* Adjust margin as needed */
+        }
+
+        /* Menu Section */
+        .menu-section {
+            padding: 40px 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            background-color: #e0f2f1; /* Change menu-section background color here */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center align content */
+        }
+
+        /* Menu Items */
+        .menu-item {
+            margin-bottom: 30px;
+            display: inline-block; /* Display menu items horizontally */
+            width: calc(50% - 20px); /* Adjust width and margin as needed */
+            margin-right: 20px; /* Adjust margin as needed */
+            vertical-align: top; /* Align menu items at the top */
+        }
+        .menu-item:last-child {
+            margin-right: 0; /* Remove right margin for the last item */
+        }
+        .menu-item h3 {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .menu-item p {
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .menu-item img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        /* Button styling */
+        .menu-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .menu-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>Unwind Restaurant</h1>
+        <img src="logo.jpg" alt="Restaurant Logo" width="100" height="100">
+    </div>
+
+    <!-- Navigation -->
+    <div class="navbar">
+        <a href="#menu">Menu</a>
+        <a href="#specials">Specials</a>
+        <a href="#contact">Contact Us</a>
+        <button class="menu-button" onclick="showMessage()">Order Now</button>
+    </div>
+
+    <!-- Main Menu -->
+    <div id="menu" class="menu-section container">
+        <h2>Our Menu</h2>
+
+        <!-- Pizza Menu -->
+        <div class="menu-item">
+            <h3>Margherita <span class="w3-right">$12.50</span></h3>
+            <p>Fresh tomatoes, fresh mozzarella, fresh basil</p>
+            <img src="12.jpeg" alt="Margherita Pizza">
+        </div>
+
+        <div class="menu-item">
+            <h3>Formaggio <span class="w3-right">$15.50</span></h3>
+            <p>Four cheeses (mozzarella, parmesan, pecorino, jarlsberg)</p>
+            <img src="2.jpg" alt="Formaggio Pizza">
+        </div>
+
+        <div class="menu-item">
+            <h3>Chicken <span class="w3-right">$17.00</span></h3>
+            <p>Fresh tomatoes, mozzarella, chicken, onions</p>
+            <img src="5.jpg" alt="Chicken Pizza">
+        </div>
+
+        <!-- Salads Menu -->
+        <h2>Salads</h2>
+
+        <div class="menu-item">
+            <h3>Caesar Salad <span class="w3-right">$9.50</span></h3>
+            <p>Romaine lettuce, croutons, Caesar dressing</p>
+            <img src="13.jpeg" alt="Caesar Salad">
+        </div>
+
+        <div class="menu-item">
+            <h3>Garden Salad <span class="w3-right">$8.50</span></h3>
+            <p>Mixed greens, tomatoes, cucumbers, red onions</p>
+            <img src="14.jpeg" alt="Garden Salad">
+        </div>
+
+        <!-- Starters Menu -->
+        <h2>Starters</h2>
+
+        <div class="menu-item">
+            <h3>Garlic Bread <span class="right">$5.50</span></h3>
+            <p>Toasted bread with garlic butter</p>
+            <img src="15.jpeg" alt="Garlic Bread">
+        </div>
+
+        <div class="menu-item">
+            <h3>Bruschetta <span class="right">$7.00</span></h3>
+            <p>Toasted bread with tomatoes, basil, and balsamic glaze</p>
+            <img src="16.jpeg" alt="Bruschetta">
+        </div>
+    </div>
+
+    <!-- JavaScript code for button click handler -->
+    <script>
+        function showMessage() {
+            alert("Button clicked! Navigating to the ordering page...");
+            window.location.href = "order.html";
+        }
+    </script>
+</body>
+
+</html>

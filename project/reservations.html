@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unwind Restaurant</title>
+    <!-- Bootstrap CSS for styling -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Google Fonts for custom font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS for additional styling -->
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #8d2bc6;
+        }
+        h1, h2, h3 {
+            color: #3c3c3c;
+        }
+
+        /* Reservation Section */
+        .reservation-section {
+            padding: 40px 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            background-color: #dca819;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center align content */
+        }
+        .reservation-form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .reservation-form input[type="text"],
+        .reservation-form input[type="tel"],
+        .reservation-form input[type="email"],
+        .reservation-form input[type="number"],
+        .reservation-form input[type="date"],
+        .reservation-form input[type="time"],
+        .reservation-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #0c0303;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .reservation-form textarea {
+            height: 120px;
+        }
+        .reservation-form button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .reservation-form button:hover {
+            background-color: #0056b3;
+        }
+        .reservation-type {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .reservation-type label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+        }
+        .reservation-type input[type="radio"] {
+            display: none;
+        }
+        .reservation-type img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+        .reservation-type input[type="radio"]:checked + img {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Reservation Section -->
+    <div id="reservations" class="reservation-section">
+        <h2>Make a Reservation</h2><br><br>
+        <div class="reservation-type">
+            <label>
+                <input type="radio" name="reservation-type" value="family">
+                <img src="family.jpeg" alt="Family">
+                Family
+            </label>
+            <label>
+                <input type="radio" name="reservation-type" value="vip">
+                <img src="vip.jpeg" alt="VIP">
+                VIP
+            </label>
+            <label>
+                <input type="radio" name="reservation-type" value="local">
+                <img src="local.jpeg" alt="Local">
+                Local
+            </label>
+            <label>
+                <input type="radio" name="reservation-type" value="medium">
+                <img src="medium.jpeg" alt="Medium">
+                Medium
+            </label>
+        </div>
+        <form class="reservation-form" action="/submit_reservation" method="POST">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <input type="number" id="people" name="people" placeholder="Number of People" required>
+            <input type="date" id="date" name="date" required>
+            <input type="time" id="time" name="time" required>
+            <textarea id="message" name="message" placeholder="Special Requests" rows="3"></textarea>
+            <button type="submit">Submit Reservation</button>
+        </form>
+    </div>
+</body>
+
+</html>

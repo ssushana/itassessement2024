@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizza Restaurant</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    /* Add custom CSS here */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ea8913; /* Change body background color here */
+  }
+  h1, h2, h3 {
+      color: #3c3c3c;
+  }
+
+  /* Header */
+  .header {
+      background-color: #00796b; /* Change header background color here */
+      color: #fff;
+      padding: 15px 0;
+      text-align: center;
+  }
+    /* Center align content within containers */
+    .content {
+      text-align: center;
+    }
+    /* Add margin to top-level containers */
+    .container {
+      margin-top: 50px;
+    }
+    /* Adjust padding and margin for elements within containers */
+    .content h1,
+    .content h2,
+    .content h3,
+    .content p {
+      margin-bottom: 20px;
+    }
+    .content form {
+      margin-top: 20px;
+    }
+    /* Section-specific background colors */
+    .about-section {
+      background-color: #827921; /* Change the background color of the About section */
+    }
+
+    
+  </style>
+</head>
+<body>
+
+<!-- About Section -->
+<div class="container py-5 bg-red text-black" id="about" bgcolor="lightpink">
+  <div class="content">
+    <h1 class="display-4 mb-4">About Us</h1>
+    <p>The Pizza Restaurant was founded by Mr. Italiano, a renowned chef passionate about authentic Italian cuisine. Since its inception, we have been dedicated to offering a culinary experience that blends traditional flavors with modern innovation.</p>
+    <div class="row">
+      <div class="col-md-8">
+        <p><strong>The Chef</strong>: Mr. Italiano himself!</p>
+      </div>
+      <div class="col-md-4">
+        <img src="chef.jpeg" alt="Chef" class="rounded-circle float-right" width="150">
+      </div>
+    </div>
+    <p>We take pride in our exquisite interiors, offering a warm and welcoming ambiance to our guests.</p>
+    <img src="01.jpeg" alt="Restaurant" class="img-fluid my-4">
+    <h2><b>Opening Hours</b></h2>
+    <div class="row">
+      <div class="col-md-6">
+        <p>Mon & Tue: CLOSED</p>
+        <p>Wednesday: 10:00 - 24:00</p>
+        <p>Thursday: 10:00 - 24:00</p>
+      </div>
+      <div class="col-md-6">
+        <p>Friday: 10:00 - 24:00</p>
+        <p>Saturday: 10:00 - 23:00</p>
+        <p>Sunday: CLOSED</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Location Map -->
+<img src="3.jpg" alt="Map" class="img-fluid grayscale w-100" id="myMap">
+
+<!-- Team Members Section -->
+<div class="container py-5 bg-light" id="team">
+  <div class="content">
+    <h1 class="display-4 mb-4">Our Team</h1>
+    <div class="row">
+      <div class="col-md-4 text-center mb-4">
+        <img src="04.jpeg" alt="Team Member 1" class="rounded-circle mb-3" width="150">
+        <h3>John Doe</h3>
+        <p>Manager</p>
+      </div>
+      <div class="col-md-4 text-center mb-4">
+        <img src="03.jpeg" alt="Team Member 2" class="rounded-circle mb-3" width="150">
+        <h3>Jane Smith</h3>
+        <p>Head Chef</p>
+      </div>
+      <div class="col-md-4 text-center mb-4">
+        <img src="02.jpeg" alt="Team Member 3" class="rounded-circle mb-3" width="150">
+        <h3>Paul Johnson</h3>
+        <p>Pastry Chef</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Section -->
+<div class="container py-5 bg-grey" id="contact">
+  <div class="content">
+    <h1 class="display-4 mb-4">Contact Us</h1>
+    <p>Find us at our location or call us at (050) 50515-122330. We're here to help with any inquiries, reservations, or special requests you may have.</p>
+    <p><strong>Reserve</strong> a table, ask about our daily specials, or just send us a message:</p>
+    <form action="/submit_form" method="POST">
+      <div class="form-group mb-3">
+        <input type="text" name="name" class="form-control" placeholder="Name" required>
+      </div>
+      <div class="form-group mb-3">
+        <input type="number" name="people" class="form-control" placeholder="How many people" required>
+      </div>
+      <div class="form-group mb-3">
+        <input type="datetime-local" name="date" class="form-control" required>
+      </div>
+      <div class="form-group mb-3">
+        <textarea name="message" class="form-control" placeholder="Message / Special requirements" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Send Message</button>
+    </form>
+  </div>
+</div>
+
+<!-- Reservation Section -->
+<div class="container py-5" id="reservation">
+  <div class="content">
+    <h1 class="display-4 mb-4">Make a Reservation</h1>
+    <p class="mb-4">Reserve a table, ask about our daily specials, or let us know any special requirements you may have.</p>
+    <form action="/submit_reservation" method="POST">
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="phone" class="form-label">Phone Number</label>
+          <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter your phone number" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="people" class="form-label">Number of People</label>
+          <input type="number" id="people" name="people" class="form-control" placeholder="Enter the number of people" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="date" class="form-label">Reservation Date</label>
+          <input type="date" id="date" name="date" class="form-control" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="time" class="form-label">Reservation Time</label>
+          <input type="time" id="time" name="time" class="form-control" required>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message / Special Requirements</label>
+        <textarea id="message" name="message" class="form-control" placeholder="Let us know if you have any special requests or messages" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Submit Reservation</button>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
